@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WidedSache - Emballages & Sachets en Carton</title>
+    <!-- CSS Bootstrap 5 -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Style Personnalisé -->
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+    <!-- Barre de Navigation -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark sticky-top custom-nav">
+        <div class="container">
+            <a class="navbar-brand brand-logo" href="#">WidedSache</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse id="navbarNav"">
+                <ul class="navbar-nav ms-auto align-items-center">
+                    <li class="nav-item"><a class="nav-link" href="#produits">Nos Formats</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#commander">Passer Commande</a></li>
+                    <li class="nav-item">
+                        <button class="btn btn-outline-warning ms-lg-3" onclick="accederEspaceVendeur(event)">🔑 Espace Vendeur</button>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- En-tête / Hero Section -->
+    <header class="hero-section text-center text-white">
+        <div class="container">
+            <h1 class="hero-title">WidedSache</h1>
+            <p class="hero-subtitle">Sachets en carton haute qualité pour professionnels et particuliers</p>
+            <a href="#commander" class="btn btn-custom-hero">Commander en ligne</a>
+        </div>
+    </header>
+
+    <!-- Section Produits -->
+    <section id="produits" class="py-5">
+        <div class="container">
+            <h2 class="section-title text-center mb-5">Choisissez votre format</h2>
+            <div class="row g-4">
+                
+                <!-- Petit Format -->
+                <div class="col-md-4">
+                    <div class="product-card">
+                        <div class="img-container">
+                            <img src="images/sachet-carton.jpg" alt="Petit Sachet WidedSache" onerror="this.src='https://via.placeholder.com/400x300?text=Sachet+WidedSache'">
+                        </div>
+                        <div class="product-body">
+                            <h3>Petit Format</h3>
+                            <span class="badge-dim">15 x 20 cm</span>
+                            <p>Parfait pour bijouterie, petit commerce et accessoires.</p>
+                            <a href="#commander" class="btn btn-select-product">Commander ce format</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Moyen Format -->
+                <div class="col-md-4">
+                    <div class="product-card">
+                        <div class="img-container">
+                            <img src="images/sachet-carton.jpg" alt="Moyen Sachet WidedSache" onerror="this.src='https://via.placeholder.com/400x300?text=Sachet+WidedSache'">
+                        </div>
+                        <div class="product-body">
+                            <h3>Moyen Format</h3>
+                            <span class="badge-dim">25 x 35 cm</span>
+                            <p>Idéal pour boutique de vêtements, cadeaux et cosmétiques.</p>
+                            <a href="#commander" class="btn btn-select-product">Commander ce format</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Grand Format -->
+                <div class="col-md-4">
+                    <div class="product-card">
+                        <div class="img-container">
+                            <img src="images/sachet-carton.jpg" alt="Grand Sachet WidedSache" onerror="this.src='https://via.placeholder.com/400x300?text=Sachet+WidedSache'">
+                        </div>
+                        <div class="product-body">
+                            <h3>Grand Format</h3>
+                            <span class="badge-dim">40 x 50 cm</span>
+                            <p>Adapté pour manteaux, chaussures et gros colis.</p>
+                            <a href="#commander" class="btn btn-select-product">Commander ce format</a>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Section Formulaire Commande Client -->
+    <section id="commander" class="py-5 bg-light">
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-lg-8">
+                    <div class="form-card">
+                        <h2 class="text-center mb-4">Formulaire de Commande</h2>
+                        <form id="orderForm">
+                            <div class="row g-3">
+                                <div class="col-md-6">
+                                    <label class="form-label">Nom complet ou Nom de l'entreprise *</label>
+                                    <input type="text" id="clientName" class="form-control" placeholder="Entrez votre nom" required>
+                                </div>
+                                <div class="col-md-6">
+                                    <label class="form-label">Numéro de téléphone *</label>
+                                    <input type="tel" id="clientPhone" class="form-control" placeholder="Ex: 06 00 00 00 00" required>
+                                </div>
+                                <div class="col-md-6">
+                                    <label class="form-label">Format du sachet *</label>
+                                    <select id="bagSize" class="form-select" required>
+                                        <option value="" selected disabled>Sélectionner la taille...</option>
+                                        <option value="Petit (15x20 cm)">Petit (15x20 cm)</option>
+                                        <option value="Moyen (25x35 cm)">Moyen (25x35 cm)</option>
+                                        <option value="Grand (40x50 cm)">Grand (40x50 cm)</option>
+                                    </select>
+                                </div>
+                                <div class="col-md-6">
+                                    <label class="form-label">Quantité *</label>
+                                    <input type="number" id="quantity" class="form-control" min="1" placeholder="Ex: 50, 100, 500" required>
+                                </div>
+                                <div class="col-12 mt-4">
+                                    <button type="submit" class="btn btn-submit-order w-100">Valider la commande</button>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Espace Administration Vendeur -->
+    <section id="admin-space" class="py-5 admin-section" style="display: none;">
+        <div class="container">
+            <div class="d-flex justify-content-between align-items-center mb-4">
+                <h2>Espace Gestion Vendeur - WidedSache</h2>
+                <button class="btn btn-danger btn-sm" onclick="fermerEspaceVendeur()">Verrouiller l'accès</button>
+            </div>
+            <div class="card shadow-sm">
+                <div class="card-body">
+                    <div class="table-responsive">
+                        <table class="table align-middle">
+                            <thead class="table-dark">
+                                <tr>
+                                    <th>Client</th>
+                                    <th>Téléphone</th>
+                                    <th>Format</th>
+                                    <th>Quantité</th>
+                                    <th>Statut</th>
+                                    <th>Action</th>
+                                </tr>
+                            </thead>
+                            <tbody id="ordersTableBody">
+                                <tr>
+                                    <td colspan="6" class="text-center text-muted">Aucune commande enregistrée pour le moment.</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Pied de Page -->
+    <footer class="footer">
+        <div class="container text-center">
+            <p>&copy; 2026 <strong>WidedSache</strong>. Tous droits réservés.</p>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>

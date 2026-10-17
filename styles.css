@@ -1,0 +1,141 @@
+/* Style Général */
+body {
+    font-family: 'Inter', system-ui, -apple-system, sans-serif;
+    color: #2b2d42;
+    background-color: #f8f9fa;
+}
+
+/* Navigation */
+.custom-nav {
+    background-color: #1a1a1a !important;
+    padding: 15px 0;
+}
+
+.brand-logo {
+    font-size: 1.6rem;
+    font-weight: 800;
+    color: #e63946 !important;
+    letter-spacing: 1px;
+}
+
+/* Banner Hero */
+.hero-section {
+    background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), #2b2d42;
+    padding: 100px 20px;
+}
+
+.hero-title {
+    font-size: 3.5rem;
+    font-weight: 800;
+    margin-bottom: 15px;
+}
+
+.hero-subtitle {
+    font-size: 1.25rem;
+    color: #d8f3dc;
+    margin-bottom: 30px;
+}
+
+.btn-custom-hero {
+    background-color: #e63946;
+    color: white;
+    font-weight: 700;
+    padding: 12px 30px;
+    border-radius: 30px;
+    transition: all 0.3s;
+}
+
+.btn-custom-hero:hover {
+    background-color: #d62828;
+    color: white;
+}
+
+/* Fiches Produits */
+.product-card {
+    background: white;
+    border-radius: 12px;
+    box-shadow: 0 5px 20px rgba(0,0,0,0.05);
+    overflow: hidden;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+.img-container {
+    height: 250px;
+    background-color: #f1f3f5;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.img-container img {
+    max-height: 100%;
+    width: auto;
+    object-fit: contain;
+}
+
+.product-body {
+    padding: 25px;
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+}
+
+.badge-dim {
+    display: inline-block;
+    background-color: #e9ecef;
+    color: #495057;
+    font-weight: 600;
+    padding: 5px 12px;
+    border-radius: 20px;
+    width: fit-content;
+    margin: 10px 0 15px;
+}
+
+.btn-select-product {
+    margin-top: auto;
+    border: 2px solid #2b2d42;
+    color: #2b2d42;
+    font-weight: 600;
+    border-radius: 8px;
+    padding: 10px;
+    text-align: center;
+    text-decoration: none;
+    transition: all 0.3s;
+}
+
+.btn-select-product:hover {
+    background-color: #2b2d42;
+    color: white;
+}
+
+/* Formulaire */
+.form-card {
+    background: white;
+    padding: 40px;
+    border-radius: 16px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.08);
+}
+
+.btn-submit-order {
+    background-color: #2b2d42;
+    color: white;
+    font-weight: 700;
+    padding: 14px;
+    border-radius: 8px;
+    font-size: 1.1rem;
+}
+
+.btn-submit-order:hover {
+    background-color: #1a1a1a;
+    color: white;
+}
+
+/* Footer */
+.footer {
+    background-color: #1a1a1a;
+    color: #8d99ae;
+    padding: 25px 0;
+    margin-top: 60px;
+}
